@@ -1,0 +1,33 @@
+﻿@model IEnumerable<Chargosh.Models.Product>
+
+<h3>تخفیف های ویژه</h3>
+
+<div class="col m10 center" id="Sales">
+   
+    @foreach (var item in Model.Where(i=>i.SalePercent>0))
+    {
+       
+     
+            <div class="col m3">
+                <a href="/Home/ProductDetails/@item.ProductId"> <img src="/ProductImage/@item.ImageProduct" /></a>
+                <p>
+                        @item.ProductName
+                    </p>
+                <del> @item.Price</del>
+                    <p>
+                        @{
+                            decimal i = (item.SalePercent * item.Price) / 100;
+                            decimal total = item.Price - i;
+                        }
+                        @total
+                    </p>
+
+                </div>
+                  
+                  
+                
+            
+       
+    }
+
+</div>

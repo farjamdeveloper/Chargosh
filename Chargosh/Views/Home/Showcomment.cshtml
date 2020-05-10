@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Chargosh.Models.Comment>
+
+@foreach (var item in Model)
+{
+    <div class="media">
+        
+        <div class="media-body" id="Comment_@(item.CommentId)" style="padding: 3px;width: 100%">
+            <h4 class="media-heading">
+                @item.Name
+                <label class="badge pull-left" style="font-weight: normal">@DateTime.Now.ToString("dddd, dd MMMM yyyy - HH:mm")</label>
+            </h4>
+            <div class="clearfix">
+                @item.Text
+            </div>
+     
+
+        </div>
+    </div>
+    }

@@ -1,0 +1,22 @@
+﻿@using Chargosh.Models
+@model IEnumerable<Chargosh.Models.Product>
+
+@{
+    ViewBag.Title = "SortByCategory";
+    int catid = ViewBag.id;
+    ChargoshContext db = new ChargoshContext();
+
+}
+
+<h2>دسته بندی </h2>
+
+@foreach (var item in Model.Where(i => i.CategoryId == catid))
+{
+    <div class="col m3">
+        <div>
+            <a href="/ProductImage/@item.ImageProduct"><img src="/ProductImage/@item.ImageProduct" /></a>
+            <p>@item.ProductName</p>
+            </div>
+        <p>@item.Price</p>
+    </div>
+}

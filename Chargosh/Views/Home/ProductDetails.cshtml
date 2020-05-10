@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Chargosh.Models.Product>
+
+@{
+    ViewBag.Title = "ProductDetails";
+}
+@{
+    foreach (var item in Model)
+    {
+
+        <div class="row productDetails">
+            <div class=" productName col m12 right-align">
+                @item.ProductName
+            </div>
+
+            <div class=" productDescription col m6  right right-align">
+                @item.Description
+            </div>
+            <div class="col m6 ">
+                <img src="/ProductImage/@item.ImageProduct" alt="@item.ProductName">
+                <p>
+                    @item.Price
+                </p>
+            </div>
+            <div class=" col m12 right-align">
+                @item.Like<span class="glyphicon glyphicon-heart"></span>
+            </div>
+        </div>
+        <a href="/payment/index/@item.ProductId">خرید</a>
+@*@Html.Action("index", "Payment", new { item.ProductId })*@
+
+@*<div>
+   @using (Html.BeginForm("Index", "Payment", FormMethod.Post))
+    {
+        <input type="submit" value="خرید" />
+    }
+    
+</div>*@
+
+
+
+        <div class="col m12 " id="comments" style="clear: both;overflow: hidden;margin-top: 20px">
+            <div id="List" style="overflow: hidden">
+                @Html.Action("Showcomment", new { item.ProductId })
+            </div>
+            <hr class="clearfix" />
+            <h5>ثبت نظر</h5>
+            <hr />
+            @Html.HiddenFor(model => item.ProductId)
+            @Html.Action("InsertComment", new { item.ProductId })
+        </div>
+    }
+}

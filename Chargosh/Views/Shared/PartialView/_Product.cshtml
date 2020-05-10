@@ -1,0 +1,13 @@
+﻿@using Chargosh.Models
+@model IEnumerable<Chargosh.Models.Product>
+<div class="col m10 center" id="product" >
+   @foreach (var item in Model)
+    {
+        <div class="col m3">
+                <a href="/Home/ProductDetails/@item.ProductId"><img src="/ProductImage/@item.ImageProduct"/></a> 
+               <p>@item.ProductName</p>
+               <p class="productPrice">@item.Price</p>
+               <div>@item.Like</div>
+            </div>
+      }
+    </div>

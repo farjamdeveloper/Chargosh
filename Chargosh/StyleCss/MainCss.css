@@ -1,0 +1,184 @@
+﻿body {
+    padding: 0;
+    padding-top: 20px;
+    font-family: irsans;
+    overflow-x: hidden;
+}
+
+@font-face {
+    font-family: irsans;
+    src: url(../fonts/irsans.ttf);
+}
+h5 {
+    font-family:irsans;
+}
+del {
+    color:darkgray;
+    font-size:small;
+}
+#logo > p {
+    display: inline;
+    padding-right: 5px;
+    color: #0c3c7d;
+    font-size:medium;
+}
+a {
+    text-decoration:none;
+    color:black;
+}
+    a:hover {
+        text-decoration:none;
+        color:lightseagreen
+    }
+    a:visited {
+        text-decoration: none;
+       
+    }
+    a:focus {
+        text-decoration: none;
+    }
+    a i {
+        padding-left:12px;
+
+    }
+nav ul a:hover {
+     background-color:initial; 
+}
+.navcolor {
+   
+    background: -webkit-linear-gradient(rgb(34,76,134),rgb(79,154,254));
+    background: -o-linear-gradient(rgb(34,76,134),rgb(79,154,254));
+    background: -moz-linear-gradient(rgb(34,76,134),rgb(79,154,254));
+    background: linear-gradient(rgb(34,76,134),rgb(79,154,254));
+}
+#slide-out >li>a>i {
+    float:initial;
+}
+.side-nav {
+    padding-right:0px;
+    width:200px;
+}
+.products {
+    padding-right: 0px;
+    position: absolute;
+    top: initial !important;
+}
+
+    .products li a {
+        float:right;
+    }
+
+#badge {
+    padding-left:25px;
+    direction:ltr;
+}
+.badge {
+    background-color:white;
+}
+
+
+#badge > .collection {
+    width: 19%;
+    direction: ltr;
+    position: absolute;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+.collection > .collapsible {
+    margin-top:0px;
+    margin-bottom:0px;
+}
+.collapsible > li >div > p {
+    background-color:white;
+}
+span.badge.new:after {
+    content: " جدید";
+}
+#product {
+    float:right;
+}
+.productPrice {
+    color:green;
+    font-size:medium
+}
+#Sales {
+    float:right
+}
+
+.productDetails {
+    padding-right:15%; 
+    padding-left:10%;
+}
+
+.productName  {
+    margin-top:50px;
+    margin-bottom:75px;
+    font-size:40px;
+    color:green;
+
+}
+.productDescription {
+    font-size:small;
+}
+.form-group > div {
+    float: right !important;
+}
+.txtcomment {
+    max-width: none !important;
+    width: 500px !important;
+}
+.txtcreate {
+    max-width: none !important;
+    width: 500px !important;
+}
+.txtcommentnazar {
+    padding-right:25px !important;
+}
+.btncomment {
+    padding-right: 35px !important;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.page-footer {
+    background: -webkit-linear-gradient(rgb(34,76,134),rgb(79,154,254));
+    background: -o-linear-gradient(rgb(34,76,134),rgb(79,154,254));
+    background: -moz-linear-gradient(rgb(34,76,134),rgb(79,154,254));
+    background: linear-gradient(rgb(34,76,134),rgb(79,154,254));
+}
+.footerlink {
+    text-align:center;
+    margin-left:0px !important;
+    margin-bottom:5%;
+}
+    .footerlink > ul {
+        padding-right:0px;
+    }
+.textfooter {
+    float:right !important;
+}
+.logofooter > img {
+    padding-top:35px;
+}
+
+
+@media only screen and (min-width: 993px) {
+    .container {
+        width: 95%;
+    }
+}
